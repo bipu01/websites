@@ -1,0 +1,93 @@
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    padding: clamp(1rem, 6vh, 6rem) clamp(1rem, 1vw, 3rem);
+    transition: all 0.3s;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.review-box {
+    height: clamp(9rem, 15vw, 30rem);
+    width: clamp(10rem, 30vw, 50rem);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    
+    margin: 0 var(--margin-for-box);
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+
+
+/* INSIDE A REVIEW BOX */
+.profile-and-name {
+    display: flex;
+    margin: 1rem, 3rem;
+    padding: 0 clamp(0.5rem, 2vmax, 1rem);
+    padding-top:clamp(0.5rem, 1vmax, 1rem);
+}
+
+.profile-name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.person-name {
+    font-size: var(--font-general-small);
+    display:flex;
+}
+
+.date {
+    opacity: 0.5;
+    font-size: var(--font-general-smaller);
+}
+
+.profile-icon {
+    margin-right: clamp(0.2rem, 1vw, 2rem);
+}
+
+
+.comment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: clamp(0.2rem, 2vmin, 0.5rem) 0;
+    height: 150%;
+    padding: 0 clamp(0.5rem, 0.5vw, 1rem);
+}
+.stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(0.5rem, 2vmax, 1rem);
+}
+
+#star {
+    font-size: clamp(19px, 3.2vw, 50px);
+}
+
+
+#comment {
+    all: unset;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    opacity:0.4;
+    font-size:var(--font-general-small);
+
+
+}
+.others-review{
+    align-self:flex-start;
+    /* white-space:nowrap; */
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:var(--font-general-smaller);
+    opacity:0.7;
+}

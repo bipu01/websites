@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* scroll-snap-type: y mandatory; */
+  font-family: "poppins";
+}
+
+.parent {
+  width: 100ivw;
+  height: 100vh;
+  position: relative;
+}
+.child {
+  width: 80%;
+  height: 102%;
+  background-color: #7475ce;
+  scroll-snap-align: end;
+  text-align: center;
+  padding: 5rem;
+  overflow: hidden;
+
+  font-size: 2rem;
+  margin: 0 10vw;
+}
+.obj {
+  position: fixed;
+  width: 70vw;
+  height: 8rem;
+  background-color: rgb(41, 36, 81);
+  color: rgb(234, 238, 224);
+  border-radius: 2rem;
+  padding: 2rem;
+  font-size: 2rem;
+
+  bottom: 5vh;
+  right: 15vw;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.obj.show-text {
+  opacity: 1;
+}
+
+.child2 {
+  background-color: #a374ce;
+}
+.child3 {
+  background-color: #ce74bc;
+}
+.child4 {
+  background-color: #ce7474;
+}
+.child5 {
+  background-color: #97ce74;
+}

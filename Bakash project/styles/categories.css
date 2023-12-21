@@ -1,0 +1,174 @@
+/* CATEGORIES STARTS HERE */
+
+/* category GRID is here */
+.category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* overflow:auto; */
+    /* grid-template-columns: repeat(auto-fit, minmax(var(--grid-size), 1fr)); */
+    justify-items: center;
+    padding-top: 4vh;
+    gap: clamp(0.5rem, 5vmin, 3rem) clamp(0.5rem, 2vmin, 4rem);
+    margin: 0 3vw;
+}
+
+
+/* Box of "CATEGORIES" part Eg: summer, classical... */
+.box-with-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-category-box);
+    /* height:var(--height-category-box); */
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Images in box */
+.images--categories {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.7);
+    transition: all 0.2s ease-in;
+}
+
+.box-with-text:hover .images--categories {
+    filter: brightness(1);
+    cursor: pointer;
+}
+
+/* Images over the box eg. summer, classic... */
+.text-on-box {
+    position: absolute;
+    color: white;
+    opacity: 0.9;
+    font-size: var(--font-medium);
+    z-index: 1;
+    transition: all 0.2s 0.1s;
+}
+
+.box-with-text:hover .text-on-box {
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+/* CATALOUGE STARTS HERE */
+
+/* Box that contains all vertical box*/
+.vertical-boxes {
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    /* white-space:nowrap; */
+    justify-content: space-between;
+    height: clamp(5rem, 55vh, 60rem);
+    padding: clamp(1rem, 5vh, 6rem) clamp(0.5rem, 1vw, 1.5rem);
+    transition: all 0.3s ease;
+}
+
+/* Horizontal LINE for scrolling */
+.vertical-boxes::-webkit-scrollbar,
+.reviews::-webkit-scrollbar {
+    background-color:rgba(255, 190, 11, 0);
+    transition:all 0.2s ease-in;
+}
+
+/* Horizontal THUMB for scrolling */
+.vertical-boxes::-webkit-scrollbar-thumb,
+.reviews::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 190, 11, 0.2);
+    border-radius: 10px;
+    transition:all 0.5s ease-in;
+}
+
+/* Hover over THUMB */
+.vertical-boxes::-webkit-scrollbar-thumb:hover,
+.reviews::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 190, 11, 0.6);
+    /* border-radius: 10px; */
+}
+
+
+
+/* Specific to vertical container in "Catalouge" only*/
+.vertical-box {
+    height: 90%;
+    flex: 0 0 auto;
+    width: 20%;
+    filter: brightness(0.9);
+    box-shadow: 0 0 10 black;
+    margin: clamp(3px, 0.5vmax, 1rem);
+    transition: all 0.15s ease-in;
+}
+
+.vertical-box:hover {
+    /* transform: scale(1.05); */
+    filter: brightness(1);
+    z-index: 3;
+}
+
+
+.arrow {
+    position: absolute;
+    width: clamp(1rem, 5vw, 5rem);
+    height: clamp(1rem, 5vw, 5rem);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 999px;
+    top: 45%;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 0.5%;
+}
+
+.arrow.right {
+    left: 94.5%;
+}
+
+.vertical-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media (max-width:430px) {
+    .category {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* BOX of category */
+    .box-with-text {
+        width: 40vw;
+        height: var(--height-category-box);
+        border-radius: 15px;
+    }
+
+    /* Titles */
+    .title {
+        letter-spacing: 1px;
+    }
+
+    .text-on-box {
+        font-size: 4vw;
+    }
+
+
+    /* catalouge */
+    #fifth-image,
+    #sixth-image {
+        display: none;
+    }
+
+}

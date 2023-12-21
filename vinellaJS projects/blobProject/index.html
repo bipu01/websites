@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="functions.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Mouse track project</title>
+  </head>
+  <body>
+    <form class="form">
+      <input
+        type="text"
+        class="input"
+        placeholder="Add to your work"
+        onchange="storeData(event)"
+      />
+      <button type="submit" class="submit" onclick="handleSubmit(event)">
+        Add
+      </button>
+    </form>
+    <div class="container">
+      <!-- <div class="blur"></div> -->
+      <div id="blob"></div>
+
+      <div class="box1">
+        <h1 class="title">To do work:</h1>
+      </div>
+      <div class="box2">
+        <h1 class="title">Completed work:</h1>
+      </div>
+    </div>
+
+    <script src="project.js"></script>
+  </body>
+</html>

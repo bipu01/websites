@@ -1,0 +1,307 @@
+/* HEADER PART STARTS */
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(0.3rem, 1.5vh, 2rem) clamp(0.5rem, 4vw, 5rem);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+
+/* header logos  */
+
+#logo {
+    font-family: 'poppins', arial;
+    font-size: clamp(1rem, 2vw, 3rem);
+    font-weight: 900;
+    letter-spacing: 3px;
+    z-index: 2;
+    color: var(--blue-dark)
+}
+
+#shopping-cart {
+    margin-right: clamp(1rem, 5vw, 39rem);
+    color: white;
+    transition: all 0.2s;
+}
+
+.sign-in {
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: all 0.2s;
+}
+
+/* header icons */
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: clamp(1rem, 5vw, 9rem);
+    font-size: var(--font-menu-size);
+}
+
+/* HEADER PART ENDS */
+
+
+
+/* LANDING PAGE STARTS */
+
+.yellow-bg {
+    background-color: #ffbe0b;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -3;
+}
+
+.black-gradient {
+    position: absolute;
+    background-image: linear-gradient(90deg, black, rgba(255, 255, 255, 0));
+    width: 100%;
+    height: 100vh;
+    opacity: 0.2;
+    z-index: -4;
+}
+
+
+/* vector bbackground on landing part */
+
+#vector-art-1 {
+    position: absolute;
+    width: clamp(10rem, 80vmax, 200rem);
+    z-index: 1;
+    /*Vector 1*/
+    opacity: 0.8;
+    left: -20%;
+    bottom: -20%;
+    transition: all 0.1s;
+    animation: vector-art-1 15s ease-in-out infinite;
+}
+
+#vector-art-2 {
+    position: absolute;
+    width: clamp(10rem, 80vmax, 200rem);
+    z-index: 1;
+    /*Vector 2*/
+    opacity: 0.8;
+    right: -20%;
+    top: -20%;
+
+    transition: all 0.1s;
+    animation: vector-art-2 10s ease-in-out infinite;
+}
+
+#vector-art-3 {
+    position: absolute;
+    width: clamp(0rem, 8vmax, 200rem);
+    animation: pill-animation 5s linear infinite;
+    left: 40%;
+    bottom: 70%;
+    opacity: 0.2;
+    transform-origin: 0 50%;
+    transform: rotate(0deg);
+}
+
+@keyframes pill-animation {
+    0% {
+        transform: rotate(0deg);
+        left: 40%;
+        bottom: 50%;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        left: 30%;
+        bottom: 60%;
+    }
+
+    100% {
+        transform: rotate(350deg);
+        left: 40%;
+        bottom: 50%;
+    }
+}
+
+#background-character {
+    position: absolute;
+    width: 100%;
+    height: clamp(5rem, 90vh, 90rem);
+    transform: translateX(30vw);
+    object-fit: contain;
+    opacity: 0.9;
+    right: 0%;
+    bottom: -10%;
+    z-index: 1;
+    /* opacity:1; */
+    transition: all 0.1s;
+    animation: background-character 1s  linear ;
+}
+
+@keyframes background-character {
+    0% {
+        transform: translateX(25vw);
+        scale:0.8;
+    }
+
+    50% {
+        /* transfrom: translateX(35vw); */
+    }
+
+    100% {
+        transform: translateX(30vw);
+        scale:1;
+    }
+}
+
+    /* Landing part */
+    .landing-part {
+        position: relative;
+        display: grid;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .landing-part::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: black;
+        opacity: 0.5;
+        box-shadow: 0 3px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* HERO TEXT of landing page */
+    .hero-text {
+        font-weight: 900px;
+        font-size: var(--font-hero-size);
+        letter-spacing: 3px;
+        font-family: 'poppins', arial;
+
+        margin: clamp(4rem, 35vh, 20rem) clamp(1rem, 10vw, 20rem);
+        z-index: 2;
+        color: white;
+        /* color:black; */
+    }
+
+    /* Special highlited text */
+    #your-needs {
+        color: var(--reddish);
+        font-family: 'poppins', arial;
+        padding: clamp(0.1rem, 1vmin, 0.7rem) clamp(0.3rem, 3vmin, 1rem);
+        transition: all 0.3s;
+    }
+
+    .highlighted-text {
+        color: var(--reddish);
+        font-weight: 700;
+    }
+
+    .highlighted-text:hover {
+        cursor: pointer;
+    }
+
+    #your-needs:hover {
+        background-color: var(--reddish);
+        color: white;
+        padding: clamp(0.1rem, 1vmin, 0.7rem) clamp(0.3rem, 3vmin, 1rem);
+        border-radius: 999px;
+        cursor: default;
+    }
+
+    /* scroll down */
+
+    .scroll-down {
+        position: absolute;
+        text-align: center;
+        font-size: var(--font-menu-size);
+        bottom: 10%;
+        right: 40%;
+        color: white;
+        z-index: 2;
+        /* pointer-events:none; */
+        opacity: 0.7;
+        padding: clamp(0.5rem, 1vh, 1rem) clamp(0.6rem, 2vw, 1.2rem);
+        transition: all 0.3;
+    }
+
+    .scroll-down:hover {
+        opacity: 1;
+        cursor: default;
+    }
+
+
+
+    /* ANIMATIONS */
+
+
+    @keyframes vector-art-2 {
+        0% {
+            width: clamp(10rem, 80vmax, 200rem);
+            transform: rotate(0deg);
+        }
+
+        50% {
+            width: clamp(10rem, 90vmax, 200rem);
+            transform: rotate(5deg);
+        }
+
+        100% {
+            width: clamp(10rem, 80vmax, 200rem);
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes vector-art-1 {
+        0% {
+            width: clamp(10rem, 80vmax, 200rem);
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: translateY(1rem);
+        }
+
+        50% {
+            width: clamp(10rem, 70vmax, 200rem);
+            transform: rotate(-5deg);
+        }
+
+        75% {
+            transform: translateY(-1rem);
+            transform: rotate(5deg);
+        }
+
+        100% {
+            width: clamp(10rem, 80vmax, 200rem);
+            transform: rotate(0deg);
+        }
+    }
+
+
+
+    @media(max-width:430px) {
+        .general-small-text {
+            font-size: 4vw;
+        }
+
+        #vector-art-1 {
+            left: -60%;
+            bottom: 0%;
+        }
+
+        #vector-art-2 {
+            right: -50%;
+            top: -20%;
+        }
+
+        .hero-text {
+            font-size: 4vw;
+            /* margin: 0 clamp(1rem, 10vw, 20rem); */
+            margin-bottom: 60%;
+        }
+    }
